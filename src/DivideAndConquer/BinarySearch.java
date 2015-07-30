@@ -24,7 +24,6 @@ public class BinarySearch {
 		if ( low == high) {
 			return no == input[low] ? low : -1;
 		}
-		
 		int mid = (low + high) / 2;
 		if (input[mid] == no) {
 			return mid;

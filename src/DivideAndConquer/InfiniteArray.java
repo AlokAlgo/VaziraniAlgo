@@ -19,7 +19,6 @@ public class InfiniteArray {
 			input[i] = Integer.MAX_VALUE;
 		}
 		System.out.println(search(input, 99, 0, 0));
-		
 	}
 	// this method can't use the length of array to use binary search
 	// so every time it doubles the search range to search until it exhausts
@@ -64,7 +63,6 @@ public class InfiniteArray {
 		if ( low == high) {
 			return no == input[low] ? low : -1;
 		}
-		
 		int mid = (low + high) / 2;
 		if (input[mid] == no) {
 			return mid;

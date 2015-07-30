@@ -6,8 +6,6 @@ public class SameNumberAsIndex {
 		for (int i = 0; i< 100 ; i++) {
 			input[i] = 2 * i ;
 		}
-		
-	
 		System.out.println(binarySearchSameNoAsIndex(input, 0, input.length -1));
 		System.out.println(binarySearchSameNoAsIndex(input, 0, input.length -1));
 	}

@@ -1,15 +1,15 @@
 package DivideAndConquer;
 
 public class BinaryMultiplication {
+	
 	public static void main(String[] args) {
 		int first = 50;
 		int second = 600;
 		String firstString = Integer.toBinaryString(first);
 		String secondString = Integer.toBinaryString(second);
 		System.out.println(multiply(firstString, secondString));
-
 	}
-
+	
 	private static int multiply(String first, String second) {
 		// if the strings are not the same length make them same length 
 		if ( first.length() != second.length()) {
@@ -54,7 +54,6 @@ public class BinaryMultiplication {
 			return input;
 		}
 		return input.substring(0, partitionLength);
-		
 	}
 	private static String getRightString(String input, int partitionLength) {
 		if (input.equals("")) {
@@ -64,7 +63,6 @@ public class BinaryMultiplication {
 			return "";
 		}
 		return input.substring(partitionLength, input.length());
-		
 	}
 	
 	private static String addBinary(String first, String second) {

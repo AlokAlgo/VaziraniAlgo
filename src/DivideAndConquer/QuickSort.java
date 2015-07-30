@@ -23,7 +23,6 @@ public class QuickSort {
 				this.partitionStartIndex = start;
 				this.partitionEndIndex = end;
 			}
-		
 	}
 	// Sorts the elements in place using a helper partitioning routine
 	private static void quickSort(int[] input, int lo, int hi) {
