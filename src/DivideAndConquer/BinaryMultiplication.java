@@ -3,7 +3,7 @@ package DivideAndConquer;
 public class BinaryMultiplication {
 	public static void main(String[] args) {
 		int first = 50;
-		int second = 60;
+		int second = 600;
 		String firstString = Integer.toBinaryString(first);
 		String secondString = Integer.toBinaryString(second);
 		System.out.println(multiply(firstString, secondString));
@@ -11,7 +11,19 @@ public class BinaryMultiplication {
 	}
 
 	private static int multiply(String first, String second) {
-	    makeSameLength(first, second);
+		// if the strings are not the same length make them same length 
+		if ( first.length() != second.length()) {
+			String pads = "";
+			
+			for (int i = 0; i < Math.abs(first.length() - second.length()); i++) {
+				pads = pads + "0";
+			}
+			if (first.length() > second.length()) {
+				second = pads + second ;
+			} else {
+				first = pads + first;
+			}
+		}
 		
 		int maxSize = Math.max(first.length(), second.length());
 		if (maxSize == 1) {
@@ -63,21 +75,6 @@ public class BinaryMultiplication {
 		return input.equals("") ? 0 : Integer.parseInt(input, 2);
 	}
 	
-	private static void makeSameLength(String first, String second) {
-		
-		if ( first.length() == second.length()) {
-			return;
-		}
-		String pads = "";
-		
-		for (int i = 0; i < Math.abs(first.length() - second.length()); i++) {
-			pads = pads + "0";
-		}
-		if (first.length() > second.length()) {
-			second = pads + second ;
-		} else {
-			first = pads + first;
-		}
-	}
+	
 
 }
