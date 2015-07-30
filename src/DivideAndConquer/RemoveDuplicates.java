@@ -20,7 +20,7 @@ public class RemoveDuplicates {
 			System.out.println(input[i]);
 		}
 	}
-	
+	// reurn an array which is sorted and contains only unique elements
 	private static int[] removeDuplicates(int[] sorted) {
 		if (sorted.length == 1) {
 			return sorted;
@@ -29,6 +29,7 @@ public class RemoveDuplicates {
 		int processIndex = 1;
 		int copyIndex = 1;
 		// LoopInvariant: All the elements before the copyIndex are unique.
+		// condition is true initially as copyIndex = 1
 		// Terminates when processIndex > sorted.length
 		while(processIndex < sorted.length) {
 			if (sorted[processIndex] != lastVal) {
